@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
   def index
-  	@quotes = Quote.first
+  	@quotes = Quote.all
   end
 
   def new
@@ -15,7 +15,7 @@ class QuotesController < ApplicationController
   private
 
   def quote_params
-  	params.require(:quote).permit(:fname, :description)
+  	params.require(:quote).permit(:fname, :definition)
   end
 
 
